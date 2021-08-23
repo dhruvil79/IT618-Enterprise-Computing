@@ -1,0 +1,33 @@
+package j2ee.lab02.item;
+
+public class Item {
+	int item_code,qty_in_stock,min_qty_in_stock;
+	String description;
+	double cost;
+	
+	Item(int code,String description,int qty,int min_qty,double cost)
+	{
+		item_code=code;
+		this.description=description;
+		qty_in_stock=qty;
+		min_qty_in_stock=min_qty;
+		this.cost=cost;
+	}
+	
+	Item(int code,String description,double cost)
+	{
+		item_code=code;
+		this.description=description;
+		qty_in_stock=0;
+		min_qty_in_stock=0;
+		this.cost=cost;
+	}
+	
+	
+	public static void main(String args[])
+	{
+		Item i = new Item(101,"Sticker",50,10,15);	
+		Item i1 = new Item(102,"Toy",10,15);
+	}
+
+}

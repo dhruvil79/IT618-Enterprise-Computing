@@ -1,0 +1,8 @@
+package j2ee.lab02.ex04;
+
+public class FrequencyCalculator {
+	public static void main(String args[])
+	{
+		
+	}
+}

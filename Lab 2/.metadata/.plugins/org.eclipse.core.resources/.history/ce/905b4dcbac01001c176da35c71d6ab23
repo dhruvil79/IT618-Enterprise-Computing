@@ -1,0 +1,18 @@
+package j2ee.lab02.ex04;
+
+public class DataReverser {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		void reverse(double arr1)
+		{
+			 
+		}
+	}
+
+	public static void reverse(double[] arr) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,19 @@
+1). List of Fields, and their data types : 
+	isbn: String
+	title:String
+	price: double
+
+2). Interface of Book class : 
+        1. Constructors with their signatures
+		public Book()
+		public Book(String isbn, String title, double price)
+
+        2. Accessor methods with their signatures : 
+		public String getIsbn()
+		public double getPrice()
+		public String getTitle()
+
+        3. Mutators with their signatures :
+		public void setIsbn(String isbn)
+		public void setPrice(double price)
+		public void setTitle(String new_title)

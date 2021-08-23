@@ -1,0 +1,100 @@
+package j2ee.lab02.item;
+
+public class Item {
+	int item_code,qty_in_stock,min_qty_in_stock;
+	String description;
+	double cost;
+	
+	Item(int code,String description,int qty,int min_qty,double cost)
+	{
+		item_code=code;
+		this.description=description;
+		qty_in_stock=qty;
+		min_qty_in_stock=min_qty;
+		this.cost=cost;
+	}
+	
+	Item(int code,String description,double cost)
+	{
+		item_code=code;
+		this.description=description;
+		qty_in_stock=0;
+		min_qty_in_stock=0;
+		this.cost=cost;
+	}
+	
+	public int getItem_code() {
+		return item_code;
+	}
+
+	public int getQty_in_stock() {
+		return qty_in_stock;
+	}
+
+	public int getMin_qty_in_stock() {
+		return min_qty_in_stock;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public double getCost() {
+		return cost;
+	}
+	
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+
+	public void addStock(int qty)
+	{
+		qty_in_stock+=qty;
+	}
+	
+	void withdrawStock(int qty) throws InSufficientStock
+	{
+		if(qty_in_stock-qty<0)
+		{
+			 throw new InSufficientStock();    
+		}
+		else
+		{
+			qty_in_stock-=qty;
+		}
+	}
+	
+	boolean isUnderStock()
+	{
+		if(qty_in_stock<min_qty_in_stock)
+			return false;
+		return true;
+	}
+	public static void main(String args[])
+	{
+		{
+			Item i = new Item(101,"Sticker",50,10,15);
+			System.out.println(i.getItem_code());
+			System.out.println(i.getDescription());
+			System.out.println(i.getQty_in_stock());
+			System.out.println(i.getMin_qty_in_stock());
+			System.out.println(i.getCost());
+			if(i.isUnderStock())
+			{
+				System.out.println("Quantity is less than minimum quantity!please increase Stock");
+			}
+			else
+			{
+				System.out.println("Quantity is Greater than minimum quantity!!!");
+			}
+			i.addStock(100);
+			i.withdrawStock(160);
+		}
+		/*
+		{
+			System.out.println(i.getMin_qty_in_stock());
+		}
+		*/
+	}
+
+}

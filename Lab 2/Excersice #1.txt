@@ -1,0 +1,15 @@
+1). List of Fields, and their data types
+	sum: double
+	maximum: double
+	count: int
+
+2). Interface of DataSet class
+        1. Constructors with their signatures : 
+		public DataSet() 
+ 
+        2. Accessor methods with their signatures : 
+		public double getAverage()
+		public double getMaximum()
+
+        3. Mutators with their signatures :
+		public void add(double x)

@@ -1,0 +1,29 @@
+package j2ee.lab02.ex04;
+
+import java.util.Arrays;
+import java.util.Random;
+
+public class java1 {
+	public static int[] calculateFrequencies(int[] arr){
+		int[] count = new int[11];
+		
+		for(int item: arr){
+			System.out.print(item+", ");
+			count[item] = count[item] + 1;
+		}
+		return count;
+	}
+	
+	public static void main(String[] args){
+		Random random = new Random(44);   
+		int[] arr = new int[10];
+		for(int i=0; i<10; i++){
+			arr[i]=random.nextInt(14);
+		}
+		System.out.println(Arrays.toString(arr));
+		int[] freq = calculateFrequencies(arr);
+		for(int i=0; i<freq.length; i++){
+			System.out.println(i + ": " + freq[0]);
+		}
+	}
+}

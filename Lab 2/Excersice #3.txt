@@ -1,0 +1,18 @@
+1). List of Fields, and their data types : 
+	a: double
+	b: double
+	c: double
+
+2). Interface of Triangle class : 
+        1. Constructors with their signatures : 
+		public InvalidData(String message)
+		public Triangle()
+		public Triangle(double a, double b, double c) throws InvalidData
+
+        2. Accessor methods with their signatures :
+		public double getA()
+		public double getB()
+		public double getC()
+
+        3. Mutators with their signatures :
+		public void resize(double new_a, double new_b, double new_c) throws InvalidData

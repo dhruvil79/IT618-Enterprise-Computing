@@ -1,0 +1,28 @@
+package j2ee.lab02.ex04;
+
+public class DataReverser {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub	
+	}
+
+	public static  void reverse(double[] arr) {
+		// TODO Auto-generated method stub
+		System.out.println("Before Reverse");
+		System.out.println("After reverse");
+		int low=0;
+		int high=arr.length-1;
+		while(low<=high)
+		{
+			double temp=arr[low];
+			arr[low]=arr[high];
+			arr[high]=temp;
+		}
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.println(arr[i]+" ");
+		}
+	}
+
+	
+
+}
